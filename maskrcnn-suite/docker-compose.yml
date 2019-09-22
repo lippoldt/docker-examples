@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+   jupyter:
+      build: .
+      image: mask-r-cnn:latest
+      ports:
+         - "8888"
+      volumes: 
+         - "/home/volume:/home"
+      command: ['jupyter','notebook','--allow-root','--port=8888','--ip=127.0.0.1']
